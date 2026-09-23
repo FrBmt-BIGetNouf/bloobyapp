@@ -1,0 +1,12 @@
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Nothing from the application belongs in this repository.
+# No source, no build output, no signing material.

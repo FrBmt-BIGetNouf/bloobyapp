@@ -1,0 +1,69 @@
+Blooby End User License Agreement
+Copyright (c) 2026 BIG et Nouf. All rights reserved.
+
+Blooby is proprietary software. It is NOT open source. This repository contains
+documentation and distribution material only; the source code of the application
+is not published and is not licensed to you.
+
+1. GRANT OF LICENSE
+   Subject to this agreement, you are granted a personal, non-exclusive,
+   non-transferable, revocable license to install and use the Blooby application
+   ("the Software") on devices you own or control, for personal or internal
+   business use.
+
+2. RESTRICTIONS
+   You may not:
+   a. copy, redistribute, sell, rent, lease, sublicense or otherwise make the
+      Software available to third parties;
+   b. reverse engineer, decompile or disassemble the Software, or attempt to
+      derive its source code, except to the extent such restriction is expressly
+      prohibited by applicable law;
+   c. modify the Software or create derivative works from it;
+   d. remove or alter any proprietary notice, trademark or attribution;
+   e. circumvent, disable or interfere with any licensing, entitlement or
+      verification mechanism of the Software.
+
+3. PAID CONTENT
+   Certain mascots and content packs require a purchase and are unlocked through
+   an account entitlement. The license granted in section 1 extends to such
+   content only for the account that purchased it, and only while that
+   entitlement remains valid.
+
+4. OWNERSHIP
+   The Software, including all mascot artwork, animations, names and related
+   assets, remains the exclusive property of BIG et Nouf and is protected by
+   copyright and other intellectual property laws. No rights are granted other
+   than those expressly stated here.
+
+5. DOCUMENTATION AND MEDIA IN THIS REPOSITORY
+   The text of this repository may be quoted for the purpose of reviewing,
+   reporting on or referring to the Software. The mascot artwork, screenshots,
+   videos and other media remain protected under section 4 and may not be
+   redistributed or reused outside of that purpose.
+
+6. THIRD-PARTY SOFTWARE
+   The Software interoperates with Claude Code, a product of Anthropic PBC.
+   Blooby is an independent project and is not affiliated with, endorsed by or
+   sponsored by Anthropic PBC. Your use of Claude Code is governed by Anthropic's
+   own terms.
+
+7. NO WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+
+8. LIMITATION OF LIABILITY
+   TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
+   OR OTHER DEALINGS IN THE SOFTWARE.
+
+9. TERMINATION
+   This license terminates automatically if you breach any of its terms. On
+   termination you must stop using the Software and remove all copies.
+
+10. GOVERNING LAW
+    This agreement is governed by French law. Nothing in this agreement limits
+    any statutory consumer rights that cannot be waived under applicable law.
+
+Questions about this license: see https://blooby.me

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Download Blooby
+    url: https://blooby.me/download
+    about: Get the latest version for your platform.
+  - name: Website
+    url: https://blooby.me
+    about: Screenshots, the full mascot roster and the changelog.

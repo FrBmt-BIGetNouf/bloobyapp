@@ -1,0 +1,28 @@
+name: Mascot suggestion
+description: Suggest a creature you would like to see join the roster
+labels: ["mascot"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Not every creature works as a mascot.
+        The ones that do tend to have a clear silhouette, a readable face, and a body that can express a state (thinking, working, waiting) without words.
+        Keep that in mind and your suggestion has a much better chance.
+
+  - type: input
+    id: creature
+    attributes:
+      label: Which creature?
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: How would it express itself?
+      description: >
+        What does it do while it thinks?
+        While it works?
+        When it is waiting for you to approve something?
+    validations:
+      required: false
