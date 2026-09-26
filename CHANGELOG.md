@@ -3,6 +3,21 @@
 Everything that changed in Blooby, newest first.
 Blooby updates itself, so you normally land on the latest version on your own.
 
+## 1.34.43 (2026-09-26)
+
+### New
+
+- **agents**: Blooby now works with Codex as well as Claude Code. Mascots appear for your Codex sessions, including when Codex is waiting for you to approve something.
+- **settings**: You now choose which coding agents get a mascot and where you run them, one line per agent and platform, and Blooby writes each one's hooks for you.
+- **sessions**: The Sessions tab says which agent is behind each session, so a Claude Code session and a Codex one are no longer told apart by their working directory alone.
+- **stats**: Statistics now have a tab per agent, opening on the busiest one. Each agent only lists the events it can actually emit, so a zero means it never happened rather than it does not exist.
+
+## 1.30.43 (2026-09-21)
+
+### Fixed
+
+- **mascots**: A mascot with cut-out openings now shows its real holes. The sticker outline was drawing a white rim around every opening instead of only around the mascot itself.
+
 ## 1.30.42 (2026-09-14)
 
 ### New
