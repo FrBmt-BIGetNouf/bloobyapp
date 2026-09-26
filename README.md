@@ -2,9 +2,9 @@
 
 <img src="https://blooby.me/media/github/logo.png" alt="Blooby" width="344">
 
-### Your Claude Code sessions, as creatures that live on the edge of your screen.
+### Your coding agents, as creatures that live on the edge of your screen.
 
-Every project you run Claude Code in gets a small animated familiar.
+Every project you run a coding agent in gets a small animated familiar.
 It works when the agent works.
 It looks up at you when the agent needs a permission.
 It falls asleep when you walk away.
@@ -15,7 +15,7 @@ It falls asleep when you walk away.
 
 [Website](https://blooby.me) &nbsp;·&nbsp; [Changelog](./CHANGELOG.md) &nbsp;·&nbsp; [Report a bug](https://github.com/FrBmt-BIGetNouf/bloobyapp/issues/new/choose)
 
-<img src="https://blooby.me/media/github/hero.gif" alt="Five Claude Code sessions, each with its own mascot, each in a different state" width="800">
+<img src="https://blooby.me/media/github/hero.gif" alt="Five agent sessions, each with its own mascot, each in a different state" width="800">
 
 </div>
 
@@ -23,7 +23,7 @@ It falls asleep when you walk away.
 
 ## Why
 
-You start Claude Code, you go read something else, and you come back to find it has spent most of that time waiting for you to approve a single file write.
+You start your agent, you go read something else, and you come back to find it has spent most of that time waiting for you to approve a single file write.
 
 With three projects open at once it gets worse: something wants you, and you have no idea which window it is in.
 
@@ -35,7 +35,7 @@ A row of creatures along the edge of your screen, one per project, each animated
 ## What a mascot tells you
 
 One mascot is one **project**, not one session.
-Three Claude Code sessions in the same repository share a creature, and it shows you whichever state needs you most.
+Three sessions in the same repository share a creature, whichever agents they belong to, and it shows you whichever state needs you most.
 
 | Two creatures, one state | | |
 |:--:|---|---|
@@ -67,13 +67,13 @@ Every paid pack has one mascot given away at its head, so you can always see wha
 
 ## How it works
 
-Claude Code can announce what it is doing.
-Blooby sets that up for you the first time it starts, listens locally, and moves the right creature.
+A coding agent can announce what it is doing, through its hooks.
+Blooby writes those hooks for you the first time it starts, listens locally, and moves the right creature.
 There is nothing to configure and nothing to keep in sync.
 
 It is a native app rather than a browser in a costume, so a row of mascots costs you a few megabytes, not a few hundred.
 
-And if you run Claude Code inside **WSL** while Blooby runs on Windows, that works too, in both mirrored and NAT networking, with no `.wslconfig` to edit.
+And if you run an agent inside **WSL** while Blooby runs on Windows, that works too, in both mirrored and NAT networking, with no `.wslconfig` to edit.
 Your Windows and WSL sessions share the same dock.
 
 <details>
@@ -81,11 +81,11 @@ Your Windows and WSL sessions share the same dock.
 
 <br>
 
-Blooby watches Claude Code through its hooks, which means it adds a few entries to your Claude Code settings and listens on a local port. Both of those deserve a straight answer.
+Blooby watches your agent through its hooks, which means it adds a few entries to that agent’s own config and listens on a local port. Both of those deserve a straight answer.
 
-- **It only listens.** Blooby answers every event and has no say in what Claude Code does next. It cannot approve, block or delay a tool call, and it is not able to.
-- **It cannot get in your way.** Each hook call is capped at two seconds and swallows its own failure, so when Blooby is closed or busy, Claude Code carries on without ever seeing an error.
-- **It does not trample your settings.** Its hooks are merged into your existing `~/.claude/settings.json`, the original is backed up before anything is written, and if that file has a syntax error Blooby refuses to touch it rather than risk your permissions and MCP config.
+- **It only listens.** Blooby answers every event and has no say in what your agent does next. It cannot approve, block or delay a tool call, and it is not able to.
+- **It cannot get in your way.** Each hook call is capped at two seconds and swallows its own failure, so when Blooby is closed or busy, your agent carries on without ever seeing an error.
+- **It does not trample your settings.** Its hooks are merged into each agent’s existing config file, the original is backed up before anything is written, and if that file has a syntax error Blooby refuses to touch it rather than risk your permissions and MCP config.
 - **It cleans up after itself.** The hooks go in when Blooby starts and come back out when you quit it, so your settings are not left littered with something you are not running.
 - **Nothing is exposed.** The listener is bound to loopback and never to `0.0.0.0`, so nothing else on your network can reach it.
 - **Your sessions stay yours.** Blooby contacts `blooby.me` for two things only: fetching a creature's artwork the first time you use it, and syncing your collection if you choose to sign in.
@@ -96,11 +96,11 @@ Blooby watches Claude Code through its hooks, which means it adds a few entries 
 
 1. [Download Blooby](https://blooby.me/download) and run the installer.
 2. Launch it. It sets up its hooks and sits in the tray.
-3. Run `claude` anywhere. A creature appears. Sessions you already had open are picked up too.
+3. Run your agent anywhere. A creature appears. Sessions you already had open are picked up too.
 
 <img src="https://blooby.me/media/github/install.gif" alt="Blooby is launched from the desktop, and the mascot of the session already running appears" width="800">
 
-**You need** Claude Code, and `curl` wherever `claude` runs (it already ships with Windows 10, Windows 11 and macOS).
+**You need** one of the agents below, and `curl` wherever that agent runs (it already ships with Windows 10, Windows 11 and macOS).
 On Windows you also need WebView2, which is already installed on Windows 10 and 11.
 You need a connection the first time, to fetch the artwork. After that Blooby works offline.
 
@@ -125,9 +125,45 @@ And it stays on top without ever fighting your other windows for it.
 
 ## Beyond the dock
 
-- **Sessions.** Every live Claude Code session on the machine, including the ones not reporting to Blooby, with its project, uptime, how long it has been idle and where it was started from. Jump to one, or kill it.
-- **Statistics.** A live count of every kind of Claude Code event, overall and per project. A fairly honest picture of how you actually work.
+- **Sessions.** Every live agent session on the machine, including the ones not reporting to Blooby, with the agent behind it, its project, uptime, how long it has been idle and where it was started from. Jump to one, or kill it.
+- **Statistics.** A live count of every kind of event, per agent, overall and per project. A fairly honest picture of how you actually work.
 - **Updates.** Blooby updates itself from a signed manifest, one click from the tray.
+
+## Agent support
+
+Blooby is not tied to one agent. It listens to whatever an agent announces through its
+hooks, so supporting a new one is a matter of learning its vocabulary and its config file.
+
+| Agent | Where it runs | What you get |
+|---|---|---|
+| **Claude Code** | Terminal, the desktop app, and WSL | Everything. All seven states, including **Error** and the shake when a tool fails. One config file per machine covers the terminal and the desktop app alike. |
+| **Codex** | The desktop app on Windows, the CLI through WSL, the terminal on macOS and Linux | Every state that matters, **Waiting on you** included. Two differences worth knowing: Codex reports no tool or turn failure, so a mascot driven by it never shows **Error**; and Codex asks you to approve Blooby's hooks the first time, and again whenever they change. |
+
+Both can run side by side. A project driven by one and a project driven by the other each
+get their own creature, the Sessions tab says which agent is behind each session, and the
+statistics are kept apart per agent.
+
+<details>
+<summary><b>Agents that have been looked at</b></summary>
+
+<br>
+
+Nothing here is promised or scheduled. It is an honest note of where these stand, so you
+can tell "not yet" from "not possible".
+
+| Agent | Where it stands |
+|---|---|
+| **GitHub Copilot CLI** | The most complete hooks of the lot, permission event included, and it can post straight to Blooby without going through a shell. Its free tier is enough to run it. The strongest candidate. |
+| **Gemini CLI** | Has hooks, and a generous free tier, but no event dedicated to permission requests. **Waiting on you** would be approximate, and that is the one state this app exists for. |
+| **Cursor** | A rich set of hooks in the editor. Its command-line agent is reported not to emit all of them, which is the half Blooby would depend on. |
+
+**Using something else?**
+[Open a ticket](https://github.com/FrBmt-BIGetNouf/bloobyapp/issues/new/choose) and say
+which agent. What decides it is always the same question: does it announce when it is
+waiting for you? If it does, Blooby can almost certainly follow it. Interest is what moves
+an agent up this list.
+
+</details>
 
 ## Platform support
 
@@ -154,4 +190,4 @@ This repository is the app's public home: its README, its changelog and its issu
 The source code is not published. See [LICENSE](./LICENSE).
 
 Blooby is an independent project.
-It is not affiliated with, endorsed by, or sponsored by Anthropic.
+It is not affiliated with, endorsed by, or sponsored by Anthropic, OpenAI, or any other maker of the agents it supports.

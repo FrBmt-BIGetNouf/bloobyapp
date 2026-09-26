@@ -28,11 +28,11 @@ small team, so please allow reasonable time for a fix before disclosing publicly
 
 ## Scope
 
-Blooby runs a **local HTTP listener** so that Claude Code's hooks can tell it what
-each session is doing, and it **edits your Claude Code settings** to install those
+Blooby runs a **local HTTP listener** so that a coding agent's hooks can tell it what
+each session is doing, and it **edits that agent's own settings** to install those
 hooks. Findings around either of those are especially welcome: the local listener
 accepting something it should not, or the hook installation writing somewhere it
 should not.
 
-Out of scope: vulnerabilities in Claude Code itself (report those to Anthropic),
+Out of scope: vulnerabilities in the agents themselves (report those to their makers),
 and issues that require an attacker to already have full control of your machine.
