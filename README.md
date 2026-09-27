@@ -171,8 +171,7 @@ an agent up this list.
 |---|---|
 | **Windows 10 and 11** | Fully supported. This is what Blooby is built for. |
 | **macOS**, Apple Silicon and Intel | Published as a universal app. The mascots, the tray, the settings and the sounds all work. A few dock interactions are still Windows only: clicking a mascot, hovering it, and jumping back to its terminal. Not yet notarized, so the first launch takes one extra step. |
-| **Linux**, X11 | Supported. The dock, the mascots, the hover card, the tray, the settings and the click that brings your terminal back all work, tested on Xubuntu 24.04. You need `curl`, which some desktops do not ship; Blooby names the command to install it if it is missing. |
-| **Linux**, Wayland | Not supported. Wayland refuses a program the things Blooby needs here: reading where your pointer is, and bringing another window to the front. Log in to an X11 session for now. |
+| **Linux** | Builds, but is neither published nor tested. |
 
 ## Getting help
 

@@ -3,12 +3,6 @@
 Everything that changed in Blooby, newest first.
 Blooby updates itself, so you normally land on the latest version on your own.
 
-## 1.35.43 (2026-09-28)
-
-### New
-
-- **linux**: Blooby now runs on Linux. Your mascots, the dock, the card that appears when you hover one and the click that brings your terminal back all work on an X11 desktop. Wayland is not supported yet: the protocol refuses some of what Blooby needs.
-
 ## 1.34.43 (2026-09-26)
 
 ### New
