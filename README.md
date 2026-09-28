@@ -11,7 +11,7 @@ It falls asleep when you walk away.
 
 [![Download](https://img.shields.io/badge/Download-blooby.me-4f7cff?style=for-the-badge)](https://blooby.me/download)
 &nbsp;
-[![Platforms](https://img.shields.io/badge/Windows%20%7C%20macOS-333?style=for-the-badge)](#platform-support)
+[![Platforms](https://img.shields.io/badge/Windows%20%7C%20macOS%20%7C%20Linux-333?style=for-the-badge)](#platform-support)
 
 [Website](https://blooby.me) &nbsp;·&nbsp; [Changelog](./CHANGELOG.md) &nbsp;·&nbsp; [Report a bug](https://github.com/FrBmt-BIGetNouf/bloobyapp/issues/new/choose)
 
@@ -100,7 +100,9 @@ Blooby watches your agent through its hooks, which means it adds a few entries t
 
 <img src="https://blooby.me/media/github/install.gif" alt="Blooby is launched from the desktop, and the mascot of the session already running appears" width="800">
 
-**You need** one of the agents below, and `curl` wherever that agent runs (it already ships with Windows 10, Windows 11 and macOS).
+**You need** one of the agents below, and `curl` wherever that agent runs (it already ships with
+Windows 10, Windows 11 and macOS; most Linux distributions do not, and Settings names the command
+that installs it on yours).
 On Windows you also need WebView2, which is already installed on Windows 10 and 11.
 You need a connection the first time, to fetch the artwork. After that Blooby works offline.
 
@@ -171,7 +173,8 @@ an agent up this list.
 |---|---|
 | **Windows 10 and 11** | Fully supported. This is what Blooby is built for. |
 | **macOS**, Apple Silicon and Intel | Published as a universal app. The mascots, the tray, the settings and the sounds all work. A few dock interactions are still Windows only: clicking a mascot, hovering it, and jumping back to its terminal. Not yet notarized, so the first launch takes one extra step. |
-| **Linux** | Builds, but is neither published nor tested. |
+| **Linux**, X11 | Supported. The mascots, the dock, the tray, the settings and the sounds all work, and so do clicking a mascot, hovering it and jumping back to its terminal. You will probably have to install `curl` yourself. |
+| **Linux**, Wayland | Supported through XWayland, which Blooby selects for you. The mascots and the dock work, and the dock follows your screen. What Wayland stops is acting on a mascot: clicking one cannot raise its terminal, because the protocol forbids any application from raising another one's window. An X11 session is what gives that back. |
 
 ## Getting help
 

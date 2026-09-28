@@ -3,6 +3,18 @@
 Everything that changed in Blooby, newest first.
 Blooby updates itself, so you normally land on the latest version on your own.
 
+## 1.35.43 (2026-09-28)
+
+### New
+
+- **linux**: Blooby now runs on Linux. On an X11 desktop everything works: the mascots, the dock, the tray, the settings, the sounds, and the dock interactions that used to be Windows only — clicking a mascot brings its terminal back, hovering it opens the card, and the dock follows the screen when you plug one in or change its resolution.
+- **linux**: On a Wayland desktop, Blooby runs through XWayland and selects it for you. The mascots and the dock work: the dock sits in the corner you chose and re-places itself when your screen changes.
+
+### Known
+
+- **linux**: Acting on a mascot is where Wayland stops you: clicking one cannot bring its terminal back. Wayland forbids any application from raising another one's window, so this is the protocol's choice rather than something left unfinished. An X11 session gives you the whole thing.
+- **linux**: Most distributions do not ship `curl`, which Blooby's hooks need. Settings names the command to install it for your distribution.
+
 ## 1.34.43 (2026-09-26)
 
 ### New
